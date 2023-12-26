@@ -6,7 +6,10 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class DepartureAfterSpecifiedTime implements FilterCondition{
+/**
+ * Excludes flights with departure time later than the specified time
+ */
+public class DepartureAfterSpecifiedTime implements FilterCondition {
     private final LocalDateTime specifiedTime;
 
     public DepartureAfterSpecifiedTime(LocalDateTime specifiedTime) {

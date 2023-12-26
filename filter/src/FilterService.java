@@ -3,7 +3,8 @@ import com.gridnine.testing.Flight;
 import java.util.List;
 
 public interface FilterService {
+    void addCondition(String methodName, Object... parameters);
 
-    public List<Flight> applyFilter(FilterBase filterBase, List <Flight> flights);
+    List<Flight> applyFilter(List<Flight> flights);
 
 }

@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class TotalGroundTimeExceedingDesired implements FilterCondition{
+public class TotalGroundTimeExceedingDesired implements FilterCondition {
     private final Duration desiredGroundTime;
 
     public TotalGroundTimeExceedingDesired(Duration desiredGroundTime) {

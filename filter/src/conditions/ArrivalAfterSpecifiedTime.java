@@ -6,6 +6,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Excludes flights with arrival time later than the specified time
+ */
 public class ArrivalAfterSpecifiedTime implements FilterCondition {
     private final LocalDateTime specifiedTime;
 
