@@ -5,18 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95bd4025-5bd0-45ac-ad51-3f0e26f1c2db" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlightsFilter.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/filter/filter.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gridnine/testing/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gridnine/testing/FlightBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gridnine/testing/Segment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/FilterBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/FilterBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/FilterBuilderImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/FilterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/FilterServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/conditions/AndCondition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/conditions/ArrivalAfterSpecifiedTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/conditions/ArrivalBeforeDeparture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/conditions/ArrivalBeforeSpecifiedTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/conditions/DepartureAfterSpecifiedTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/conditions/DepartureBeforeSpecifiedTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/conditions/FilterCondition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/conditions/TotalGroundTimeExceedingDesired.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/conditions/TransfersNumberExceedingDesired.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/sorter/FlightSorter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter/src/sorter/FlightSorterImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/filter/filter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/filter/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,11 +33,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
@@ -48,12 +61,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "filter-module",
     "jdk.selected.JAVA_MODULE": "17",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Cosmonaut/IdeaProjects/FlightsFilter/filter/src/Main.java",
     "vue.rearranger.settings.migration": "true"
   }
@@ -61,7 +75,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="FlightsFilter" />
+      <module name="filter" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -80,8 +94,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1703562202569</updated>
-      <workItem from="1703562203610" duration="605000" />
+      <workItem from="1703562203610" duration="23028000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1703562984861</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703562984861</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,7 +115,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="filter-module" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
